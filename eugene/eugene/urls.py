@@ -18,7 +18,15 @@ from django.urls import path
 
 from child.views import main
 
+from child.views import child
+
+
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main, name='main'),
-]
+    path('child/<int:pk>', child, name='child'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
