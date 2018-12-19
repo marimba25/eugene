@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 
 class Child(models.Model):
     name = models.CharField(verbose_name='Имя крошки', max_length=64, blank=True)
@@ -21,6 +19,3 @@ class Photo(models.Model):
     def __str__(self):
         return self.title
 
-
-
-# '/home/marina/PycharmProjects/eugene/eugene/child/photo/mimi.jpg'
