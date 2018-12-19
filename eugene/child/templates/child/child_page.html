@@ -21,20 +21,18 @@
     </div>
     {{ child.name }}
 
-{% for photo in photos %}
-    {% thumbnail photo.file "200x200" as im %}
-        <img src="{{ im.url }}">
-    {% endthumbnail %}
-{% endfor %}
 
-{% for row in rows_of_photos %}
+    {% for row in rows_of_photos %}
 <div class="row">
     {% for photo in row %}
   <div class="col-xs-6 col-md-3">
     <div class="thumbnail">
-       {{ photo.file }}
+    {% thumbnail photo.file "200x200" as im %}
+        <img src="{{ im.url }}">
+    {% endthumbnail %}
+
       <div class="caption">
-        <h3>{{ photo.title }}<br>{{ child.name }}</h3>
+        <h3>{{ photo.title }}<br>{{ photo.description }}</h3>
         <p>...</p>
         <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
       </div>
@@ -43,7 +41,12 @@
   </div>
     {% endfor %}
 </div>
-    {% endfor %}
+ {% endfor %}
+
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>

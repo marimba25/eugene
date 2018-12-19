@@ -28,7 +28,7 @@ def child(request, pk=None):
     rows_of_photos = chunk_data(photos, 4)
     template = 'child/child_page.html'
     context = {'child': child_obj, 'photos': photos,
-               'rows_of_products': rows_of_photos}
+               'rows_of_photos': rows_of_photos}
     return render(request, template, context)
 
 
