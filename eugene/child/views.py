@@ -33,7 +33,10 @@ def child(request, pk=None):
 
 
 def photo(request, pk=None):
-    pass
+    photo_obj = get_object_or_404(models.Photo, pk=pk)
+    template = 'child/photo_page.html'
+    context = {'photo': photo_obj}
+    return render(request, template, context)
 
 
    # def photos(request, pk=None):
