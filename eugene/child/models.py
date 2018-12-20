@@ -2,8 +2,11 @@ from django.db import models
 
 
 class Child(models.Model):
+    SEX = ((1, 'Мальчик'),
+            (2, 'Девочка'))
     name = models.CharField(verbose_name='Имя крошки', max_length=64, blank=True)
     birthday = models.DateField(verbose_name='дата рождения')
+    sex = models.IntegerField(choices=SEX, verbose_name='Пол', null=True, blank=True)
 
     def __str__(self):
         return self.name or "No name"

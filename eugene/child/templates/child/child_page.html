@@ -17,7 +17,12 @@
         {% include "child/includes/inc_menu.html" %}
 
             <div class="page-header">
+                {% if child.sex == 1 %}
                 <h3>Крошик растёт <br><span class="badge badge-secondary">{{ child.name }}</span></h3>
+                {% endif %}
+                {% if child.sex == 2 %}
+                <h3>Крошка растёт <br><span class="badge badge-secondary">{{ child.name }}</span></h3>
+                {% endif %}
             </div>
 
 
