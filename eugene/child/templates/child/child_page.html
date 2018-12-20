@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <title>КРОШИК</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
 </head>
 
@@ -34,8 +34,8 @@
        <div class="card" style="width: 12rem;">
   <img class="card-img-top" src="{{ im.url }}" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">{{ photo.title }}</h5>
+    <p class="card-text">{{ photo.description }}</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
