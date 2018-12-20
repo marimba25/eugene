@@ -14,38 +14,38 @@
 
 <body>
     <div class="container">
+        {% include "child/includes/inc_menu.html" %}
 
             <div class="page-header">
-                <h1> Крошик растёт<small></small></h1>
+                <h3>Крошик растёт <span class="badge badge-secondary"></span></h3>
             </div>
 
     {{ child.name }}
 
 
+
+
+
+
     {% for row in rows_of_photos %}
 <div class="row">
     {% for photo in row %}
-  <div class="col-xs-6 col-md-3">
-    <div class="thumbnail">
-    {% thumbnail photo.file "200x200" as im %}
-        <img src="{{ im.url }}">
-    {% endthumbnail %}
-
-      <div class="caption">
-        <h3>{{ photo.title }}<br>{{ photo.description }}</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-      </div>
-    </div>
-
+        {% thumbnail photo.file "200x200" as im %}
+       <div class="card" style="width: 12rem;">
+  <img class="card-img-top" src="{{ im.url }}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
+</div>
+            {% endthumbnail %}
+
     {% endfor %}
 </div>
  {% endfor %}
 
-
 </div>
-
 
 
 
