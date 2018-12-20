@@ -18,7 +18,7 @@ from django.urls import path
 
 from child.views import main
 
-from child.views import child
+from child.views import child, photo
 
 
 from django.conf import settings
@@ -28,5 +28,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main, name='main'),
     path('child/<int:pk>', child, name='child'),
+    path('photo/<int:pk>', photo, name='photo')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

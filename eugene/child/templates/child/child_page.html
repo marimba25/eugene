@@ -41,7 +41,7 @@
   <div class="card-body">
     <h5 class="card-title">{{ photo.title }}</h5>
     <p class="card-text">{{ photo.description }}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="{% url 'photo' photo.id %}" class="btn btn-primary">Подробнее</a>
   </div>
 </div>
             {% endthumbnail %}
