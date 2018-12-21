@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% load thumbnail %}
 <html>
 <head>
 
@@ -14,12 +15,16 @@
         {% include "child/includes/inc_menu.html" %}
 
 <div class="media">
-  <img class="mr-3" src="{{ photo.file.url }}" height="400" alt="Generic placeholder image">
+    {% thumbnail photo.file "400x400" as im %}
+  <img class="mr-3" src="{{ im.url }}" alt="Generic placeholder image">
   <div class="media-body">
+
     <h5 class="mt-0">{{ photo.title }}</h5>
     {{ photo.description }}
   </div>
+
 </div>
     </div>
+    {% endthumbnail %}
 
 

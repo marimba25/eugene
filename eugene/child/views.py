@@ -39,6 +39,10 @@ def photo(request, pk=None):
     return render(request, template, context)
 
 
+def family(request):
+    pass
+
+
    # def photos(request, pk=None):
     #    child_obj = get_object_or_404(models.Child, pk=pk)
     #    photos = child_obj.photo_set.all()
