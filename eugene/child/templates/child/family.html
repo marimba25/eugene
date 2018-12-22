@@ -25,10 +25,14 @@
 
         <ul class="list-group">
             {% for member in family %}
-            <li class="list-group-item">{{ member.name }} - <b>{{ member.relationship }}</b></li>
+            <li class="media">
+    <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">{{member.name}} - {{member.relationship}}</h5>
+
+    </div></li>
             {% endfor %}
 </ul>
     </div>
-
 
 
