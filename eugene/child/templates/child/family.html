@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% load thumbnail %}
 
 
 <html>
@@ -25,14 +26,20 @@
 
         <ul class="list-group">
             {% for member in family %}
+
             <li class="media">
-    <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
+{% thumbnail member.photo "200x200" crop='center' as im %}
+    <img class="mr-3" src="{{ im.url }}" alt="Generic placeholder image">
+{% endthumbnail %}
     <div class="media-body">
       <h5 class="mt-0 mb-1">{{member.name}} - {{member.relationship}}</h5>
-
     </div></li>
-            {% endfor %}
+
+
+  {% endfor %}
 </ul>
+
     </div>
+
 
 

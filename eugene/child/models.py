@@ -27,6 +27,7 @@ class FamilyMember(models.Model):
     name = models.CharField(verbose_name='Имя родственника', max_length=100, default="Родственник")
     relationship = models.CharField(verbose_name='Отношение', max_length=100)
     child = models.ForeignKey('Child', on_delete=models.CASCADE)
+    photo = models.ImageField(upload_to='child/photo', blank=True)
 
     def __str__(self):
         return self.name
