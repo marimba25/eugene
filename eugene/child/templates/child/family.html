@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>КРОШИК</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+
+<body>
+    <div class="container">
+        <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'child' child.id %}">Это я</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Моя семья</li>
+  </ol>
+</nav>
+
+
+        <ul class="list-group">
+            {% for member in family %}
+            <li class="list-group-item">{{ member.name }} - <b>{{ member.relationship }}</b></li>
+            {% endfor %}
+</ul>
+    </div>
+
+
+

@@ -39,19 +39,14 @@ def photo(request, pk=None):
     return render(request, template, context)
 
 
-def family(request):
-    pass
+def family(request, pk=None):
+    child_obj = get_object_or_404(models.Child, pk=pk)
+    family_set = child_obj.familymember_set.all()
+    template = 'child/family.html'
+    context = {'family': family_set, 'child': child_obj}
+    return render(request, template, context)
 
 
-   # def photos(request, pk=None):
-    #    child_obj = get_object_or_404(models.Child, pk=pk)
-    #    photos = child_obj.photo_set.all()
-    #    rows_of_products = chunk_data(photos, 4)
-    #    template = 'child/child_page.html'
-    #    context = {'photos': photos,
-    #               'rows_of_products': rows_of_products,
-     #              }
-     #   return render(request, template, context)
 
 
 
