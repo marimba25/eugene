@@ -16,7 +16,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
     <li class="breadcrumb-item"><a href="{% url 'child' child.id %}">Это я</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Моя семья</li>
+      <li class="breadcrumb-item"><a href="{% url 'family' child.id %}">Моя семья</a></li>
   </ol>
 </nav>
 <div class="media">
