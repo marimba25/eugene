@@ -25,10 +25,10 @@ SECRET_KEY = '$+flra224175696i7lc%!jllm_ani22%v!9c#@o0v4u%dl7zxl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['marimba25.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
-#'127.0.0.1'
+#  'marimba25.pythonanywhere.com'
 # Application definition
 
 INSTALLED_APPS = [
