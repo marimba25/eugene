@@ -6,3 +6,28 @@
 .media {
     margin-top: 40px;
     border: ridge;}
+
+.page-header {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    }
+
+
+body {
+    background-color: linen;
+    }
+
+
+.list-group-item {
+    background-color: wheat;
+    }
+
+
+.breadcrumb {
+    margin-top: 20px;
+    background-color: wheat;}
+
+.btn-primary {
+    background-color: slategrey;
+    border-color: slategrey;}
