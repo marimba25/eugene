@@ -15,19 +15,42 @@
 
 
 body {
-    background-color: linen;
+    background-image: url(img/back.jpg);
+    background-size: 300px;
     }
 
 
 .list-group-item {
-    background-color: wheat;
+    background-color: white;
+    }
+
+a.list-group-item{
+    font-size: 20px;
     }
 
 
 .breadcrumb {
     margin-top: 20px;
-    background-color: wheat;}
+    margin-bottom: 0px;
+    background-color: white;
+    font-size:25px;}
 
 .btn-primary {
     background-color: slategrey;
     border-color: slategrey;}
+
+body p {
+    background-color: white;
+    margin-bottom: 0px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    }
+
+body h4 {
+    background-color: white;
+    font-size: 18px;
+    }
+
+li.media .media-body {
+    background-color: white;
+    }
