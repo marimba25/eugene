@@ -17,7 +17,7 @@ class Photo(models.Model):
     child = models.ForeignKey('Child', on_delete=models.CASCADE)
     file = models.ImageField(upload_to='child/photo')
     description = models.TextField(verbose_name='описание фотографии', blank=True)
-    date = models.DateTimeField(verbose_name='дата', auto_now_add=True)
+    date = models.DateTimeField(verbose_name='дата')
 
     def __str__(self):
         return self.title or 'No title'
