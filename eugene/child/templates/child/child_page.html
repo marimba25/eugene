@@ -29,7 +29,7 @@
       <div class="photo-gallery">
         {% for photo in photos %} {% thumbnail photo.file "442x600" crop="center" as im %}
 
-        <img src="{{ im.url }}" /> {% endthumbnail %} {% endfor %}
+        <a href="{% url 'photo' photo.id %}"><img src="{{ im.url }}" /> </a>{% endthumbnail %} {% endfor %}
       </div>
     </div>
 
