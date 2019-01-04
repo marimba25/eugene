@@ -25,10 +25,9 @@ def chunk_data(data, chunk_size):
 def child(request, pk=None):
     child_obj = get_object_or_404(models.Child, pk=pk)
     photos = child_obj.photo_set.all()
-    rows_of_photos = chunk_data(photos, 5)
+
     template = 'child/child_page.html'
-    context = {'child': child_obj, 'photos': photos,
-               'rows_of_photos': rows_of_photos}
+    context = {'child': child_obj, 'photos': photos}
     return render(request, template, context)
 
 
