@@ -1,4 +1,5 @@
 <!DOCTYPE html> {% load staticfiles %}
+{% load thumbnail %}
 <html>
   <head>
     <meta charset="utf-8" />
@@ -18,9 +19,15 @@
         <h1>Детки<small></small></h1>
       </div>
 
-      <div class="list-group">
-        {% for child in children %}
-        <a href="{% url 'child' child.id %}" class="list-group-item"> {{ child }} </a> {% endfor %}
+      <div class="main-gallery">
+        {% for album in albums %}
+        <div>{% thumbnail album.photo.file "200x200" crop="center" as im %}
+        <a href="{% url 'child' album.child.id %}"><img src="{{ im.url }}" /></a><br>
+        {{ album.child }}
+        {% endthumbnail %}
+        </div>
+        {% endfor %}
+
       </div>
     </div>
 

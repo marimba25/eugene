@@ -9,10 +9,14 @@ from .models import Child, Photo
 
 def main(request):
     children = Child.objects.all()
-    print(children)
+    albums = []
+    for child in children:
+        photo = child.photo_set.first()
+        albums.append({'child': child, 'photo': photo})
+    print(albums)
 
     template = 'child/index.html'
-    context = {'children': children}
+    context = {'albums': albums}
 
     return render(request, template, context)
 

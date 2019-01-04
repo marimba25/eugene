@@ -68,3 +68,18 @@ body h4 {
   height: 100%;
   object-fit: cover;
 }
+
+body h1 {
+    text-align: center;
+}
+
+
+.main-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 640px;
+  grid-gap: 10px;
+  background: white;
+  margin-left: auto;
+  margin-right: auto;
+}
