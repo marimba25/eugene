@@ -36,6 +36,13 @@ body p {
   margin-bottom: 0px;
   padding-bottom: 16px;
   font-size: 20px;
+  text-align: center;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 1.4em;
+  font-family: serif;
 }
 
 body h4 {
@@ -59,7 +66,7 @@ body h4 {
   width: 100vw;
   grid-auto-rows: 600px;
   grid-gap: 10px;
-  padding: 10px 0;
+  padding: 0;
   background: white;
 }
 
@@ -71,15 +78,31 @@ body h4 {
 
 body h1 {
     text-align: center;
+    font-style: normal;
+    letter-spacing: 2px;
+    font-weight: normal;
+
+    font-size: 32px;
+    line-height: 1.4em;
+    font-family: serif;
 }
 
 
 .main-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 640px;
-  grid-gap: 10px;
+  width: 500px;
+  grid-gap: 15px;
+  padding: 0;
   background: white;
   margin-left: auto;
   margin-right: auto;
+}
+
+body .photo-name {
+    text-align: center;
+    font-weight: normal;
+    font-size: 22px;
+    font-style: italic;
+    font-family: didot-w01-italic, serif;
 }

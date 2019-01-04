@@ -16,12 +16,12 @@
   <body>
     <div class="container">
       <div class="page-header">
-        <h1>Детки<small></small></h1>
+        <h1>ДЕТКИ<small></small></h1>
       </div>
 
       <div class="main-gallery">
         {% for album in albums %}
-        <div>{% thumbnail album.photo.file "200x200" crop="center" as im %}
+        <div class="photo-name">{% thumbnail album.photo.file "245x245" crop="center" as im %}
         <a href="{% url 'child' album.child.id %}"><img src="{{ im.url }}" /></a><br>
         {{ album.child }}
         {% endthumbnail %}

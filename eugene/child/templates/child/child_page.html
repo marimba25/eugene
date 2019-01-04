@@ -23,8 +23,10 @@
         </ol>
       </nav>
 
-      <p>Меня зовут {{ child.name }}. Это <a href="{% url 'family' child.id %}">моя семья</a></p>
-      <h4>А вот так я расту</h4>
+      <p>{{ child.name }}</p>
+      <br><h4>{{ child.birthday }}</h4>
+      <h4>Это <a href="{% url 'family' child.id %}">моя семья</a><br>
+        А вот так я расту
 
       <div class="photo-gallery">
         {% for photo in photos %} {% thumbnail photo.file "442x600" crop="center" as im %}
