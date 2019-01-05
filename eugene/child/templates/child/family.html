@@ -1,45 +1,39 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-{% load thumbnail %}
-
+<!DOCTYPE html> {% load staticfiles %} {% load thumbnail %}
 
 <html>
-<head>
-
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>КРОШИК</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="container">
-        <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Главная</a></li>
-    <li class="breadcrumb-item"><a href="{% url 'child' child.id %}">Это я</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Моя семья</li>
-  </ol>
-</nav>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Главная</a></li>
+          <li class="breadcrumb-item">
+            <a href="{% url 'child' child.id %}">Это я</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Моя семья</li>
+        </ol>
+      </nav>
 
-
-        <ul class="list-group">
-            {% for member in family %}
-
-            <li class="media">
-{% thumbnail member.photo "200x200" crop='center' as im %}
-    <img class="mr-3" src="{{ im.url }}" alt="Generic placeholder image">
-{% endthumbnail %}
-    <div class="media-body">
-      <h5 class="mt-0 mb-1">{{member.name}} - {{member.relationship}}</h5>
-    </div></li>
-
-
-  {% endfor %}
-</ul>
-
+      <div class="main-gallery">
+        {% for member in family %}
+        <div class="photo-name">
+          {% thumbnail member.photo "245x245" crop="center" as im %}
+          <img src="{{ im.url }}" /> {% endthumbnail %} <br />
+          {{ member.name }} - {{member.relationship}}
+        </div>
+        {% endfor %}
+      </div>
     </div>
-
-
-
+  </body>
+</html>

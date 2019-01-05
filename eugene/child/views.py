@@ -47,6 +47,7 @@ def photo(request, pk=None):
 def family(request, pk=None):
     child_obj = get_object_or_404(models.Child, pk=pk)
     family_set = child_obj.familymember_set.all()
+    print(family_set)
     template = 'child/family.html'
     context = {'family': family_set, 'child': child_obj}
     return render(request, template, context)
