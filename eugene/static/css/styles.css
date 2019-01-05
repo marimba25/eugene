@@ -34,7 +34,7 @@ a.list-group-item {
 
 body p {
   margin-bottom: 0px;
-  padding-bottom: 16px;
+  padding-bottom: 0px;
   font-size: 20px;
   text-align: center;
   font-style: normal;
@@ -105,4 +105,22 @@ body .photo-name {
     font-size: 22px;
     font-style: italic;
     font-family: didot-w01-italic, serif;
+}
+
+.title-page {
+    text-align: center;
+}
+
+.title-page h5 {
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 17px;
+    line-height: 1.4em;
+    font-family: brandon-grot-w01-light, sans-serif;
+    color: #A0A09F;
 }
