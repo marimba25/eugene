@@ -19,17 +19,19 @@
       <li class="breadcrumb-item"><a href="{% url 'family' child.id %}">Моя семья</a></li>
   </ol>
 </nav>
-<div class="media">
+<div>
+        <div>
     {% thumbnail photo.file "400x400" as im %}
-  <img class="mr-3" src="{{ im.url }}" alt="Generic placeholder image">
-  <div class="media-body">
+  <img src="{{ im.url }}">
+  <div>
 
-    <h5 class="mt-0">{{ photo.title }}</h5>
+    <h5>{{ photo.title }}</h5>
     {{ photo.description }}
   </div>
 
 </div>
     </div>
     {% endthumbnail %}
+    </div>
 
 
