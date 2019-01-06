@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
-<body>
-    <div class="container">
+<body><div class="container">
         <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Главная</a></li>
@@ -20,18 +19,20 @@
   </ol>
 </nav>
 <div>
-        <div>
+        <div class="photo-place">
     {% thumbnail photo.file "400x400" as im %}
   <img src="{{ im.url }}">
-  <div>
+  <div class="photo-description">
 
-    <h5>{{ photo.title }}</h5>
-    {{ photo.description }}
+    <h5>{{ photo.title }}<br>
+    {{ photo.description }}</h5>
   </div>
 
-</div>
-    </div>
-    {% endthumbnail %}
-    </div>
 
+
+    {% endthumbnail %}
+              </div>
+    </div>
+    </div>
+</body>
 
