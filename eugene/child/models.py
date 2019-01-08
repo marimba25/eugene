@@ -23,6 +23,8 @@ class Photo(models.Model):
         return self.title or 'No title'
 
 
+
+
 class FamilyMember(models.Model):
     name = models.CharField(verbose_name='Имя родственника', max_length=100, default="Родственник")
     relationship = models.CharField(verbose_name='Отношение', max_length=100)

@@ -20,11 +20,12 @@
 </nav>
 <div>
         <div class="photo-place">
-    {% thumbnail photo.file "400x400" as im %}
+    {% thumbnail photo.file "500x500" as im %}
   <img src="{{ im.url }}">
   <div class="photo-description">
 
-    <h5>{{ photo.title }}<br>
+    <h5>{{ photo.date }}<br>
+        {{ photo.title }}<br>
     {{ photo.description }}</h5>
   </div>
 
