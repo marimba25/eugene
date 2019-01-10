@@ -20,7 +20,7 @@
 </nav>
 <div>
         <div class="photo-place">
-    {% thumbnail photo.file "600x600" padding=True as im %}
+    {% thumbnail photo.file "600x600" padding=True padding_color='#f8f8f8' as im  %}
 
             <div class="photo-item">
 
@@ -29,10 +29,10 @@
 
   <div class="photo-description">
 
-    <h5>{{ photo.date| date:"SHORT_DATE_FORMAT" }}<br>
-        {{ photo.title }}<br>
-    {{ photo.description }}</h5>
-  </div>
+      <div class="photo-date">{{ photo.date| date:"SHORT_DATE_FORMAT" }}</div>
+        <b>{{ photo.title }}</b><br>
+    {{ photo.description }}
+
             </div>
 
 

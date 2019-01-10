@@ -141,12 +141,18 @@ body .photo-name {
 .photo-place h5 {
     text-align: center;
     min-width: 600px;
-    font-family: AmerigoBTRusbyme-Roman;
+
+}
+
+.photo-date {
+    font-family: BKOVKY+sandman-ItalicED.BYLY-Italic;
 }
 
 
-
-
+.photo-description{
+    font-family: BKOVKY+sandman-ItalicED.BYLY-Italic;
+    width: 600px;
+}
 
 
 
