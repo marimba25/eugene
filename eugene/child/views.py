@@ -11,7 +11,7 @@ def main(request):
     children = Child.objects.all()
     albums = []
     for child in children:
-        photo = child.photo_set.first()
+        photo = child.photo_set.last()
         albums.append({'child': child, 'photo': photo})
     print(albums)
 
