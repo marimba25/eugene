@@ -55,7 +55,7 @@ body h4 {
 }
 
 .container {
-  width: 1800px;
+  width: 100%;
   max-width: 3000px;
   padding: 0;
   margin: 0;
@@ -65,7 +65,7 @@ body h4 {
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 100vw;
+  width: 100%;
   grid-auto-rows: 600px;
   grid-gap: 10px;
   padding: 0;
